@@ -43,7 +43,7 @@ def closed(update: Update, context: CallbackContext) -> None:
     ticket_num = update.message.text.replace("/closed", "")   
     updater.bot.send_message(chat_id=473116994,
                      text=f'Ticket {ticket_num} is closed')
-     updater.bot.send_message(chat_id=1818615806,
+    updater.bot.send_message(chat_id=1818615806,
                      text=f'Ticket {ticket_num} is closed')
     logs = open("logs.txt", "a")
     logs.write(f'Ticket {ticket_num} is closed')
