@@ -49,7 +49,7 @@ def logs(update: Update, context: CallbackContext) -> None:
             updater.bot.send_message(chat_id=473116994,
                      text=logs.read())
  
-updater = Updater('INSERISCI TOKEN BOT QUI')
+updater = Updater('1905606264:AAHqhJjKSadd-PJLtpVoXsx1QZMswjIUgio')
  
 updater.dispatcher.add_handler(CommandHandler('start', hello))
 updater.dispatcher.add_handler(CommandHandler('richiesta', richiesta))
