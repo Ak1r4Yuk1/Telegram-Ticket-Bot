@@ -39,7 +39,7 @@ def pending(update: Update, context: CallbackContext) -> None:
     logs.write(f'Ticket {ticket_num} is pending')
     logs.close()
 
- def closed(update: Update, context: CallbackContext) -> None:
+def closed(update: Update, context: CallbackContext) -> None:
     ticket_num = update.message.text.replace("/closed", "")   
     updater.bot.send_message(chat_id=473116994,
                      text=f'Ticket {ticket_num} is closed')
