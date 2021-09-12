@@ -33,12 +33,17 @@ def pending(update: Update, context: CallbackContext) -> None:
     ticket_num = update.message.text.replace("/pending", "")   
     updater.bot.send_message(chat_id=473116994,
                      text=f'Ticket {ticket_num} is pending')
+    updater.bot.send_message(chat_id=1818615806,
+                     text=f'Ticket {ticket_num} is pending')
     logs = open("logs.txt", "a")
     logs.write(f'Ticket {ticket_num} is pending')
     logs.close()
-def closed(update: Update, context: CallbackContext) -> None:
+
+ def closed(update: Update, context: CallbackContext) -> None:
     ticket_num = update.message.text.replace("/closed", "")   
     updater.bot.send_message(chat_id=473116994,
+                     text=f'Ticket {ticket_num} is closed')
+     updater.bot.send_message(chat_id=1818615806,
                      text=f'Ticket {ticket_num} is closed')
     logs = open("logs.txt", "a")
     logs.write(f'Ticket {ticket_num} is closed')
@@ -48,7 +53,9 @@ def logs(update: Update, context: CallbackContext) -> None:
     with open('logs.txt', 'r') as logs:
             updater.bot.send_message(chat_id=473116994,
                      text=logs.read())
- 
+            updater.bot.send_message(chat_id=473116994,
+                     text=logs.read())
+#1818615806 
 updater = Updater('1905606264:AAHqhJjKSadd-PJLtpVoXsx1QZMswjIUgio')
  
 updater.dispatcher.add_handler(CommandHandler('start', hello))
