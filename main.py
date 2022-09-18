@@ -55,8 +55,8 @@ def logs(update: Update, context: CallbackContext) -> None:
                      text=logs.read())
             updater.bot.send_message(chat_id=473116994,
                      text=logs.read())
-#1818615806 
-updater = Updater('1905606264:AAHqhJjKSadd-PJLtpVoXsx1QZMswjIUgio')
+
+updater = Updater('CHATID:TOKEN')
  
 updater.dispatcher.add_handler(CommandHandler('start', hello))
 updater.dispatcher.add_handler(CommandHandler('richiesta', richiesta))
